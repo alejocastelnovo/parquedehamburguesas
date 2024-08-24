@@ -1,42 +1,28 @@
 import React from "react";
 import Logo from "../Assets/logo.jpg";
-import { BsTwitter } from "react-icons/bs";
-import { SiLinkedin } from "react-icons/si";
-import { BsYoutube } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { BsFacebook, BsWhatsapp, BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <div className="footer-section-one">
+      <div className="footer-content">
         <div className="footer-logo-container">
-          <img src={Logo} alt="" />
         </div>
         <div className="footer-icons">
-          <BsTwitter />
-          <SiLinkedin />
-          <BsYoutube />
-          <FaFacebookF />
+          <a href="https://www.facebook.com/ParqueDeHamburguesas" target="_blank" rel="noopener noreferrer">
+            <BsFacebook />
+          </a>
+          <a href="https://www.instagram.com/parquedehamburguesas?utm_medium=copy_link" target="_blank" rel="noopener noreferrer">
+            <BsInstagram />
+          </a>
+          <a href="https://wa.me/5493425785262" target="_blank" rel="noopener noreferrer">
+            <BsWhatsapp />
+          </a>
         </div>
-      </div>
-      <div className="footer-section-two">
-        <div className="footer-section-columns">
-          <span>Qualtiy</span>
-          <span>Help</span>
-          <span>Share</span>
-          <span>Carrers</span>
-          <span>Testimonials</span>
-          <span>Work</span>
-        </div>
-        <div className="footer-section-columns">
-          <span>244-5333-7783</span>
-          <span>hello@food.com</span>
-          <span>press@food.com</span>
-          <span>contact@food.com</span>
-        </div>
-        <div className="footer-section-columns">
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
+        <div className="footer-contact">
+
+
+          <span>castelnovo12@gmail.com</span>
         </div>
       </div>
     </div>

@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Logo from "../Assets/logo.jpg";
-import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -15,43 +13,55 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
-      text: "Home",
+      text: "Inicio",
       icon: <HomeIcon />,
+      section: "home"
     },
     {
-      text: "About",
+      text: "Sobre Nosotros",
       icon: <InfoIcon />,
+      section: "about"
     },
     {
-      text: "Testimonials",
+      text: "Variedades",
       icon: <CommentRoundedIcon />,
+      section: "work"
     },
     {
-      text: "Contact",
-      icon: <PhoneRoundedIcon />,
+      text: "Visitanos",
+      icon: <CommentRoundedIcon />,
+      section: "testimonials"
     },
-
+    {
+      text: "Contacto",
+      icon: <PhoneRoundedIcon />,
+      section: "footer"
+    },
   ];
+
   return (
     <nav>
       <div className="nav-logo-container">
-        
-      <img src={Logo} alt="Logo" className="navbar-logo" />
-
+        <img src={Logo} alt="Logo" className="navbar-logo" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Inicio</a>
-        <a href="">Sobre nosotros</a>
-        <a href="">Testimonios</a>
-        <a href="">Contacto</a>
-
-        <button className="primary-button">Hacenos un pedido!</button>
+        {menuOptions.map((item) => (
+          <Link
+            key={item.text}
+            to={item.section}
+            smooth={true}
+            duration={500}
+            className="navbar-link"
+          >
+            {item.text}
+          </Link>
+        ))}
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
@@ -66,7 +76,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton component={Link} to={item.section} smooth={true} duration={500}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>

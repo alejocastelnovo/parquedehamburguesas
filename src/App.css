@@ -36,6 +36,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   min-height: 90px;
+  
 }
 
 .navbar-logo {
@@ -53,6 +54,12 @@ nav {
 }
 
 
+
+.navbar-links-container a:hover {
+  color: #cb8b00; /* Cambia el color del texto al hacer hover */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del texto */
+  cursor: pointer;
+}
 
 .navbar-menu-container {
   display: none;
@@ -75,15 +82,12 @@ nav {
   font-weight: 600;
   transition: 0.2s;
 }
-.navbar-cart-icon {
-  font-size: 1.15rem;
-}
+
 .primary-button:hover {
   background-color: rgb(234, 234, 234);
 }
 .navbar-menu-container svg {
-  font-size: 1.5rem;
-  cursor: pointer;
+  display: none;
 }
 .home-banner-container {
   position: relative;
@@ -244,7 +248,7 @@ nav {
 .footer-section-two {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .footer-section-columns {
   display: flex;
@@ -348,10 +352,11 @@ nav {
 }
 @media (max-width: 800px) {
 
+
   .navbar-logo {
     height: 100px;
     width: 100px;
-  
+    
   }
 
   .nav-logo-container {
@@ -461,4 +466,50 @@ nav {
   .about-background-image-container {
     display: none;
   }
+}
+
+
+
+.footer-wrapper {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo-container {
+  margin-bottom: 20px;
+}
+
+
+.footer-icons {
+  margin-bottom: 20px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #007bff; /* Cambia el color al pasar el ratón */
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contact span {
+  display: block;
+  margin: 5px 0;
+  color: #333;
 }
