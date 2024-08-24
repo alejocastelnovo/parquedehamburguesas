@@ -8,6 +8,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+.banner-image {
+  border-radius: 200px; /* Ajusta el valor según el grado de redondez que desees */
+}
+
+
+
 .App {
   min-height: 100vh;
   width: 85vw;
@@ -29,6 +37,23 @@ nav {
   justify-content: space-between;
   min-height: 90px;
 }
+
+.navbar-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin-top: 3rem;
+
+}
+
+
+.about-background-image {
+  border-radius: 50px; /* Ajusta el valor según el grado de redondeo que desees */
+
+}
+
+
+
 .navbar-menu-container {
   display: none;
 }
@@ -41,7 +66,7 @@ nav {
 }
 .primary-button {
   padding: 0.9rem 1.75rem;
-  background-color: white;
+  background-color: rgb(186, 177, 177);
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -67,10 +92,12 @@ nav {
 }
 .home-bannerImage-container {
   position: absolute;
-  top: -100px;
+  top: -30px;
   right: -170px;
   z-index: -2;
   max-width: 700px;
+  background-color: #000000;
+  border-radius: 500px;
 }
 .home-image-section {
   max-width: 600px;
@@ -157,7 +184,6 @@ nav {
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: 600;
-  color: #484848;
   transition: 0.2s;
   display: flex;
   align-items: center;
@@ -166,6 +192,7 @@ nav {
 .watch-video-button svg {
   font-size: 3rem;
   margin-right: 1rem;
+  color: #e48f0f;
 }
 .contact-page-wrapper h1 {
   max-width: 900px !important;
@@ -320,8 +347,17 @@ nav {
   }
 }
 @media (max-width: 800px) {
+
+  .navbar-logo {
+    height: 100px;
+    width: 100px;
+  
+  }
+
   .nav-logo-container {
-    max-width: 140px;
+    max-width: 100px;
+
+
   }
   .navbar-links-container {
     display: none;

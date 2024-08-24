@@ -14,18 +14,24 @@ const Home = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            Your Favourite Food Delivered Hot & Fresh
+            ¡Bienvenido a Parque de Hamburguesas!
           </h1>
           <p className="primary-text">
-            Healthy switcher chefs do all the prep work, like peeding, chopping
-            & marinating, so you can cook a fresh food.
+            Somos algo + que un deporte. 🍔
           </p>
-          <button className="secondary-button">
-            Order Now <FiArrowRight />{" "}
+          <button
+            className="secondary-button"
+            onClick={() => {
+              window.location.href = "https://wa.me/5493425785262";
+            }}
+          >
+            Hace tu pedido <FiArrowRight />
           </button>
+
         </div>
         <div className="home-image-section">
-          <img src={BannerImage} alt="" />
+          <img src={BannerImage} alt="Banner" className="banner-image" />
+
         </div>
       </div>
     </div>
