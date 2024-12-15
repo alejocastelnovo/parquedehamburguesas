@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="footer-contact">
 
 
-          <span>castelnovo12@gmail.com</span>
+          <span> Hecho por castelnovo12@gmail.com</span>
         </div>
       </div>
     </div>
